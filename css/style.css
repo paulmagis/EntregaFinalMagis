@@ -1,0 +1,388 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#body-index {
+  color: #081304;
+  background-color: #E3F26D;
+}
+#body-index #carouselExampleCaptions .carousel-item img {
+  height: 500px; /* Ajusta a la altura deseada */
+  object-fit: cover; /* Mantiene el aspecto de la imagen */
+}
+#body-index #carouselExampleCaptions .carousel-caption h5 {
+  color: #E3F26D; /* Cambia el color */
+  font-size: 50px; /* Cambia el tamaño de la fuente */
+  font-weight: bold; /* Hace el texto negrita */
+  text-shadow: 1px 1px 0 black; /* Sombra del texto para hacerlo parecer más ancho */
+  background-color: rgba(44, 64, 24, 0.5); /* Verde oscuro con 50% de transparencia */
+  padding: 5px; /* Añade espacio alrededor del texto */
+}
+#body-index #carouselExampleCaptions .carousel-caption p {
+  color: #E3F26D; /* Cambia el color */
+  font-size: 40px; /* Cambia el tamaño de la fuente */
+  font-weight: bold; /* Hace el texto negrita */
+  text-shadow: 1px 1px 0 black; /* Sombra del texto para hacerlo parecer más ancho */
+  background-color: rgba(44, 64, 24, 0.5); /* Verde oscuro con 50% de transparencia */
+  padding: 5px; /* Añade espacio alrededor del texto */
+}
+#body-index #carouselExampleCaptions .carousel-caption a {
+  color: #E3F26D; /* Cambia el color */
+  font-size: 20px; /* Cambia el tamaño de la fuente */
+  font-weight: bold; /* Hace el texto negrita */
+  text-shadow: 1px 1px 0 black; /* Sombra del texto para hacerlo parecer más ancho */
+  background-color: rgba(44, 64, 24, 0.5); /* Verde oscuro con 50% de transparencia */
+  padding: 5px; /* Añade espacio alrededor del texto */
+}
+
+#BodyNosotros {
+  color: #081304;
+  background-color: #E3F26D;
+}
+#BodyNosotros main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 100px;
+  flex-wrap: wrap;
+}
+#BodyNosotros main .Textos {
+  text-align: center;
+}
+#BodyNosotros main .Textos h2 {
+  margin: 10px;
+}
+#BodyNosotros main .Textos h2 span {
+  display: block;
+}
+#BodyNosotros main .Textos .Boton {
+  margin: 10px;
+  background-color: #112607;
+  padding: 10px;
+  color: #b3ce5a;
+  display: inline-block;
+  box-shadow: 5px 5px 10px black;
+}
+#BodyNosotros main .Imagen {
+  width: 300px;
+}
+#BodyNosotros main .Imagen img:hover {
+  width: 350px;
+}
+#BodyNosotros section {
+  background-color: #2C4018;
+  color: #b3ce5a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1%;
+  padding: 20px;
+  box-shadow: 5px 5px 15px black;
+  flex-wrap: wrap;
+}
+#BodyNosotros section div {
+  width: 300px;
+  text-align: center;
+}
+#BodyNosotros section div img {
+  width: 100px;
+}
+#BodyNosotros footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#BodyProductos {
+  color: #081304;
+  background-color: #E3F26D;
+}
+#BodyProductos .grid-item {
+  border: 1px solid #081304;
+}
+#BodyProductos .ProductoSection {
+  display: flex;
+}
+#BodyProductos .ProductoImagen img {
+  width: 300px;
+  height: 225px;
+}
+#BodyProductos .ProductoImagen img:hover {
+  width: 360px;
+  height: 285px;
+}
+#BodyProductos .ProductoImagenTexto {
+  width: 280px;
+  margin: 20px;
+}
+#BodyProductos .adds {
+  grid-column: 3/3;
+  grid-row: 1/7;
+}
+
+/*media cuerry para el heder*/
+@media (min-width: 1024px) { /* Ajusta según tu punto de interrupción deseado para escritorio */
+  #BodyProductos .GridConteinter {
+    border: 3px solid #081304;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    /*Esto lo centra atento Paul el add hay que ver como le damos espacio*/
+    justify-content: center;
+    /*grid-template-rows: repeat(5, 100px);*/
+    grid-template-columns: auto auto auto;
+    grid-template-rows: repeat(7, auto);
+    margin-bottom: 10px;
+  }
+}
+/* Pantallas de móvil (por ejemplo, menos de 768px) */
+@media (max-width: 767px) {
+  .header-nav {
+    order: -1; /* Mueve el menú al inicio */
+  }
+  #header-logo-glock {
+    order: 1; /* Mantiene el logo en el medio */
+  }
+  .header-titulo-pagina {
+    order: 2; /* El título queda al final */
+  }
+}
+@media (max-width: 767px) {
+  #BodyProductos .GridConteinter {
+    display: flex; /* Activa Flexbox para el contenedor */
+    flex-direction: column; /* Organiza los ítems en una columna */
+  }
+}
+#body-poligono {
+  color: #081304;
+  background-color: #E3F26D;
+  cursor: url("../imagenes/miraArmaPuntero.png"), auto;
+}
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes aparecerYcrecer {
+  from {
+    opacity: 0; /* Comienza totalmente transparente */
+    transform: scale(1); /* Comienza con el tamaño normal */
+  }
+  to {
+    opacity: 1; /* Termina totalmente opaco */
+    transform: scale(1.1); /* Aumenta un 10% su tamaño */
+  }
+}
+#body-poligono h2 {
+  animation-name: aparecerYcrecer;
+  animation-duration: 2s; /* Duración de 2 segundos */
+  animation-timing-function: ease-out; /* Aceleración al principio y desaceleración al final */
+  animation-fill-mode: forwards; /* Mantiene el estado final después de terminar la animación */
+  animation-iteration-count: infinite; /* Número de veces que la animación se repetirá */
+}
+#body-poligono .grid-container-rows {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-auto-flow: column;
+}
+#body-poligono .grid-container-rows .grid-item {
+  background-color: #E3F26D;
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img1 {
+  transition: transform 0.5s ease;
+  display: block;
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img1:hover {
+  transform: rotate(180deg) scale(-1, -1);
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img2 {
+  transition: transform 0.5s ease;
+  display: block;
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img2:hover {
+  transform: rotateX(-92deg);
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img3 {
+  transition: transform 0.5s ease;
+  display: block;
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img3:hover {
+  transform: rotateY(92deg);
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img5 {
+  transition: transform 0.5s ease;
+  display: block;
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img5:hover {
+  transform: skewX(45deg);
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img6 {
+  transition: transform 0.5s ease;
+  display: block;
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img6:hover {
+  transform: rotateX(92deg);
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img7 {
+  animation-name: girar; /* Nombre de la animación definida */
+  animation-duration: 15s; /* Duración de la animación */
+  animation-timing-function: linear; /* Función de tiempo para la transición */
+  animation-iteration-count: infinite; /* Número de veces que la animación se repetirá */
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .gradiente-lineal {
+  transition: transform 0.5s ease;
+  display: block;
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .gradiente-lineal:hover {
+  width: 400px;
+  height: 150px;
+  background-image: linear-gradient(to top, rgb(58, 209, 27), rgb(72, 90, 70));
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .gradiente-left {
+  transition: transform 0.5s ease;
+  display: block;
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .gradiente-left:hover {
+  width: 800px;
+  height: 150px;
+  background-image: linear-gradient(to left, rgb(58, 209, 27), rgb(72, 90, 70));
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img4 {
+  transition: transform 0.5s ease;
+  display: block;
+}
+#body-poligono .grid-container-rows .grid-item .grid-container-column .img4:hover {
+  transform: translateX(-400px);
+}
+
+@media (max-width: 768px) {
+  #body-poligono .grid-container-rows .grid-container-column {
+    display: flex; /* Activa Flexbox para el contenedor */
+    flex-direction: column; /* Organiza los ítems en una columna */
+  }
+}
+#body-cursos {
+  color: #081304;
+  background-color: #E3F26D;
+}
+#body-cursos main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 100px;
+  flex-wrap: wrap;
+}
+#body-cursos main .Textos {
+  text-align: center;
+}
+#body-cursos main .Textos h2 {
+  margin: 10px;
+}
+#body-cursos main .Textos h2 span {
+  display: block;
+}
+#body-cursos main footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#body-gestoria {
+  color: #081304;
+  background-color: #E3F26D;
+}
+#body-gestoria main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 100px;
+  flex-wrap: wrap;
+}
+#body-gestoria main .Textos {
+  text-align: center;
+}
+#body-gestoria main .Textos h2 {
+  margin: 10px;
+}
+#body-gestoria main .Textos h2 span {
+  display: block;
+}
+#body-gestoria main footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+header {
+  display: flex; /*Activamos el Flexbox*/
+  flex-direction: row; /* Comienza apilando los elementos verticalmente */
+  align-items: center;
+  justify-content: space-around; /* Distribuimos el espacio: la imagen a la izquierda, el nav a la derecha, y el h1 en el centro */
+  text-align: center; /*Asegura que el texto dentro del h1 ete centrado*/
+  flex-wrap: wrap;
+  background-color: #2C4018;
+  color: #b3ce5a;
+  margin: 1%;
+  padding: 2% 2% 2% 0%;
+  box-shadow: 5px 5px 15px black;
+}
+
+.header {
+  display: flex; /*Activamos el Flexbox*/
+  flex-direction: row; /* Comienza apilando los elementos verticalmente */
+  align-items: center;
+  justify-content: space-around; /* Distribuimos el espacio: la imagen a la izquierda, el nav a la derecha, y el h1 en el centro */
+  text-align: center; /*Asegura que el texto dentro del h1 ete centrado*/
+  flex-wrap: wrap;
+  /*Aqui voy a cambiar la fuente de los nav-link del nav de bootstrap */
+  /*Con esto le cambie el color al icono de la hamburguesa */
+}
+.header #logo-glock {
+  flex: 0, 5 2 0, 5;
+  padding: 0 10px;
+  width: 300px;
+  height: auto;
+}
+.header .navegador {
+  flex: 0, 5 2 0, 5;
+  padding: 0 10px;
+}
+.header .titulo-pagina {
+  flex: 0, 5 2 0, 5;
+  padding: 0 10px;
+  font-family: "Kode Mono", monospace;
+  font-size: 60px; /* Ajusta este valor al tamaño que prefieras */
+  font-weight: bold; /* Hace el texto más grueso */
+  white-space: normal; /* Permite que el título se ajuste en varias líneas si es necesario */
+}
+.header nav .navbar-nav .nav-link,
+.header nav .navbar-nav .nav-link.active { /* Esto cubre tanto los enlaces normales como el activo */
+  color: #E3F26D;
+}
+.header .navbar-toggler-icon {
+  background-color: #b3ce5a;
+}
+.header .dropdown-menu .dropdown-item {
+  color: #b3ce5a; /* Cambia el color de la fuente a un verde claro */
+  background-color: #2C4018; /* Cambia el color de fondo a un verde oscuro */
+}
+.header .dropdown-menu .dropdown-item:hover {
+  background-color: #3e5c2a; /* Un verde ligeramente más claro para el efecto hover */
+}
+
+/*# sourceMappingURL=style.css.map */
