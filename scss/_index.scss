@@ -1,12 +1,40 @@
 @import "utilities/colors";
+@import "utilities/variables";
+
 
 
 #body-index {
     color: $Text-color1;
-    background-color: $BG-color;
+    background-color: $BG-color;display: grid;
+    grid-template-rows: auto 1fr; // La primera fila para el header y la segunda para el contenido debajo
+    grid-template-columns: 2fr 1fr; // Define las proporciones de las columnas debajo del header
+    .header {
+        grid-column: 1 / -1; // Hace que el header abarque todas las columnas
+      }
+    
+    footer {
+        grid-row: 2; // Posiciona el footer en la segunda fila
+        grid-column: 2 / 3; // Posiciona el footer en la primera columna de la segunda fila
+        #mapaGoogle{
+            height: 250px;
+        }
+        #formularioContacto{
+            width: 100%;
+        }
+
+      }
+    
+    #carouselExampleCaptions {
+        grid-row: 2; // Posiciona el carrusel en la segunda fila
+        grid-column: 1 / 2; // Posiciona el carrusel en la segunda columna de la segunda fila
+      }
+    Section{
+        grid-column: 1 / -1; // Hace que el header abarque todas las columnas
+    }
     #carouselExampleCaptions{
         .carousel-item img {
             height: 500px; /* Ajusta a la altura deseada */
+            width: auto;
             object-fit: cover; /* Mantiene el aspecto de la imagen */
         }
         .carousel-caption {
@@ -37,5 +65,43 @@
         }
        
     }
+    section {
+        background-color: $Header-bg-color;
+        color: $Header-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        margin: 1%;   
+        padding: 20px;  
+        box-shadow: 5px 5px 15px $Shadow-color ;
+        flex-wrap: wrap;
+        div {
+            width: $Div-width-Body-Nosotros;
+            text-align: center; 
+            img {
+                width: $Div-img-Body-Nosotros;
+            }
+        }
+    }
+    
 }
 
+/* Pantallas de móvil (por ejemplo, menos de 768px) */
+@media (max-width: 767px) {
+    #Body-index{
+        .header-nav {
+            order: -1; /* Mueve el menú al inicio */
+        }
+        #header-logo-glock {
+            order: 1; /* Mantiene el logo en el medio */
+        }
+        .header-titulo-pagina {
+            order: 2; /* El título queda al final */
+        }
+    }
+}
+@media (max-width: 768px) {
+    #body-index {
+        display: block;
+    }
+}

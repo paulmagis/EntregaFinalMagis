@@ -8,9 +8,33 @@
 #body-index {
   color: #081304;
   background-color: #E3F26D;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 2fr 1fr;
+}
+#body-index .header {
+  grid-column: 1/-1;
+}
+#body-index footer {
+  grid-row: 2;
+  grid-column: 2/3;
+}
+#body-index footer #mapaGoogle {
+  height: 250px;
+}
+#body-index footer #formularioContacto {
+  width: 100%;
+}
+#body-index #carouselExampleCaptions {
+  grid-row: 2;
+  grid-column: 1/2;
+}
+#body-index Section {
+  grid-column: 1/-1;
 }
 #body-index #carouselExampleCaptions .carousel-item img {
   height: 500px; /* Ajusta a la altura deseada */
+  width: auto;
   object-fit: cover; /* Mantiene el aspecto de la imagen */
 }
 #body-index #carouselExampleCaptions .carousel-caption h5 {
@@ -37,17 +61,55 @@
   background-color: rgba(44, 64, 24, 0.5); /* Verde oscuro con 50% de transparencia */
   padding: 5px; /* Añade espacio alrededor del texto */
 }
+#body-index section {
+  background-color: #2C4018;
+  color: #b3ce5a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1%;
+  padding: 20px;
+  box-shadow: 5px 5px 15px black;
+  flex-wrap: wrap;
+}
+#body-index section div {
+  width: 300px;
+  text-align: center;
+}
+#body-index section div img {
+  width: 100px;
+}
 
+/* Pantallas de móvil (por ejemplo, menos de 768px) */
+@media (max-width: 767px) {
+  #Body-index .header-nav {
+    order: -1; /* Mueve el menú al inicio */
+  }
+  #Body-index #header-logo-glock {
+    order: 1; /* Mantiene el logo en el medio */
+  }
+  #Body-index .header-titulo-pagina {
+    order: 2; /* El título queda al final */
+  }
+}
+@media (max-width: 768px) {
+  #body-index {
+    display: block;
+  }
+}
 #BodyNosotros {
   color: #081304;
   background-color: #E3F26D;
+}
+#BodyNosotros .header #header-logo-glock {
+  width: 150px;
 }
 #BodyNosotros main {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 100px;
+  margin: 45px;
   flex-wrap: wrap;
 }
 #BodyNosotros main .Textos {
@@ -60,9 +122,9 @@
   display: block;
 }
 #BodyNosotros main .Textos .Boton {
-  margin: 10px;
+  margin: 5px;
   background-color: #112607;
-  padding: 10px;
+  padding: 5px;
   color: #b3ce5a;
   display: inline-block;
   box-shadow: 5px 5px 10px black;
@@ -71,7 +133,7 @@
   width: 300px;
 }
 #BodyNosotros main .Imagen img:hover {
-  width: 350px;
+  width: 310px;
 }
 #BodyNosotros section {
   background-color: #2C4018;
@@ -79,9 +141,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1%;
-  padding: 20px;
-  box-shadow: 5px 5px 15px black;
+  margin: 0.5%;
+  padding: 10px;
+  box-shadow: 5px 5px 10px black;
   flex-wrap: wrap;
 }
 #BodyNosotros section div {
@@ -100,6 +162,9 @@
   color: #081304;
   background-color: #E3F26D;
 }
+#BodyProductos .header #header-logo-glock {
+  width: 150px;
+}
 #BodyProductos .grid-item {
   border: 1px solid #081304;
 }
@@ -111,8 +176,7 @@
   height: 225px;
 }
 #BodyProductos .ProductoImagen img:hover {
-  width: 360px;
-  height: 285px;
+  filter: grayscale(100%);
 }
 #BodyProductos .ProductoImagenTexto {
   width: 280px;
@@ -152,14 +216,23 @@
 }
 @media (max-width: 767px) {
   #BodyProductos .GridConteinter {
-    display: flex; /* Activa Flexbox para el contenedor */
-    flex-direction: column; /* Organiza los ítems en una columna */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  #BodyProductos .GridConteinter .ProductoSection {
+    display: flex;
+    flex-direction: column;
   }
 }
 #body-poligono {
   color: #081304;
   background-color: #E3F26D;
+  font-size: 20px;
   cursor: url("../imagenes/miraArmaPuntero.png"), auto;
+}
+#body-poligono .header #header-logo-glock {
+  width: 150px;
 }
 @keyframes girar {
   from {
@@ -194,11 +267,12 @@
 }
 #body-poligono .grid-container-rows .grid-item {
   background-color: #E3F26D;
-  border: 1px solid black;
+  border: 3px solid black;
   padding: 20px;
   text-align: center;
 }
 #body-poligono .grid-container-rows .grid-item .grid-container-column {
+  background-color: #3e5c2a;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
@@ -224,26 +298,6 @@
 #body-poligono .grid-container-rows .grid-item .grid-container-column .img3:hover {
   transform: rotateY(92deg);
 }
-#body-poligono .grid-container-rows .grid-item .grid-container-column .img5 {
-  transition: transform 0.5s ease;
-  display: block;
-}
-#body-poligono .grid-container-rows .grid-item .grid-container-column .img5:hover {
-  transform: skewX(45deg);
-}
-#body-poligono .grid-container-rows .grid-item .grid-container-column .img6 {
-  transition: transform 0.5s ease;
-  display: block;
-}
-#body-poligono .grid-container-rows .grid-item .grid-container-column .img6:hover {
-  transform: rotateX(92deg);
-}
-#body-poligono .grid-container-rows .grid-item .grid-container-column .img7 {
-  animation-name: girar; /* Nombre de la animación definida */
-  animation-duration: 15s; /* Duración de la animación */
-  animation-timing-function: linear; /* Función de tiempo para la transición */
-  animation-iteration-count: infinite; /* Número de veces que la animación se repetirá */
-}
 #body-poligono .grid-container-rows .grid-item .grid-container-column .gradiente-lineal {
   transition: transform 0.5s ease;
   display: block;
@@ -258,7 +312,7 @@
   display: block;
 }
 #body-poligono .grid-container-rows .grid-item .grid-container-column .gradiente-left:hover {
-  width: 800px;
+  width: 400px;
   height: 150px;
   background-image: linear-gradient(to left, rgb(58, 209, 27), rgb(72, 90, 70));
 }
@@ -271,40 +325,79 @@
 }
 
 @media (max-width: 768px) {
-  #body-poligono .grid-container-rows .grid-container-column {
-    display: flex; /* Activa Flexbox para el contenedor */
-    flex-direction: column; /* Organiza los ítems en una columna */
+  #body-poligono {
+    display: block;
+  }
+  #body-poligono .grid-container-rows {
+    display: block;
+  }
+  #body-poligono .grid-container-rows .grid-item {
+    display: block;
+  }
+  #body-poligono .grid-container-rows .grid-item .grid-container-column {
+    display: block;
+  }
+  #body-poligono .grid-container-rows .grid-item .grid-container-column .img2 {
+    display: none;
+  }
+  #body-poligono .grid-container-rows .grid-item .grid-container-column .gradiente-left {
+    display: none;
+  }
+  #body-poligono .grid-container-rows .grid-item .grid-container-column .img6 {
+    display: none;
   }
 }
 #body-cursos {
   color: #081304;
   background-color: #E3F26D;
 }
-#body-cursos main {
-  display: flex;
+#body-cursos .header #header-logo-glock {
+  width: 150px;
+}
+#body-cursos section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 100px;
-  flex-wrap: wrap;
-}
-#body-cursos main .Textos {
-  text-align: center;
-}
-#body-cursos main .Textos h2 {
   margin: 10px;
 }
-#body-cursos main .Textos h2 span {
-  display: block;
+#body-cursos section h2 {
+  margin: 10px;
 }
-#body-cursos main footer {
-  margin-top: 20px;
+#body-cursos footer #mapaGoogle {
+  display: inline;
+  height: 200px;
+  width: 48%;
+}
+#body-cursos footer #formularioContacto {
+  display: inline;
+  height: 250px;
+  width: 48%;
+}
+#body-cursos .Botton {
+  background-color: #2C4018;
+  color: #b3ce5a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5%;
+  padding: 10px;
+  box-shadow: 5px 5px 10px black;
+  flex-wrap: wrap;
+}
+#body-cursos .Botton div {
+  width: 300px;
   text-align: center;
+}
+#body-cursos .Botton div img {
+  width: 100px;
 }
 
 #body-gestoria {
   color: #081304;
   background-color: #E3F26D;
+}
+#body-gestoria .header #header-logo-glock {
+  width: 150px;
 }
 #body-gestoria main {
   display: flex;
@@ -323,9 +416,49 @@
 #body-gestoria main .Textos h2 span {
   display: block;
 }
-#body-gestoria main footer {
+#body-gestoria footer {
   margin-top: 20px;
+}
+#body-gestoria footer #mapaGoogle {
+  display: inline;
+  height: 200px;
+  width: 48%;
+}
+#body-gestoria footer #formularioContacto {
+  display: inline;
+  height: 250px;
+  width: 48%;
+}
+#body-gestoria .Botton {
+  background-color: #2C4018;
+  color: #b3ce5a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5%;
+  padding: 10px;
+  box-shadow: 5px 5px 10px black;
+  flex-wrap: wrap;
+}
+#body-gestoria .Botton div {
+  width: 300px;
   text-align: center;
+}
+#body-gestoria .Botton div img {
+  width: 100px;
+}
+
+#Agradecimientos {
+  color: #081304;
+  background-color: #E3F26D;
+  text-align: center;
+}
+#Agradecimientos h2 {
+  padding: 20px;
+  font-size: 30px;
+}
+#Agradecimientos p {
+  font-size: 20px;
 }
 
 header {
@@ -338,8 +471,8 @@ header {
   background-color: #2C4018;
   color: #b3ce5a;
   margin: 1%;
-  padding: 2% 2% 2% 0%;
-  box-shadow: 5px 5px 15px black;
+  padding: 0.5% 1% 0.5% 0%;
+  box-shadow: 5px 5px 10px black;
 }
 
 .header {
@@ -354,8 +487,8 @@ header {
 }
 .header #logo-glock {
   flex: 0, 5 2 0, 5;
-  padding: 0 10px;
-  width: 300px;
+  padding: 0 5px;
+  width: 150px;
   height: auto;
 }
 .header .navegador {
@@ -364,9 +497,9 @@ header {
 }
 .header .titulo-pagina {
   flex: 0, 5 2 0, 5;
-  padding: 0 10px;
+  padding: 0 5px;
   font-family: "Kode Mono", monospace;
-  font-size: 60px; /* Ajusta este valor al tamaño que prefieras */
+  font-size: 30px; /* Ajusta este valor al tamaño que prefieras */
   font-weight: bold; /* Hace el texto más grueso */
   white-space: normal; /* Permite que el título se ajuste en varias líneas si es necesario */
 }

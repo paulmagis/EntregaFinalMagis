@@ -3,6 +3,11 @@
 #BodyProductos {
     color: $Text-color1;
     background-color: $BG-color;
+    .header{
+        #header-logo-glock{
+            width: 150px;
+        }
+    }
     .grid-item {
         border: 1px solid $Text-color1;
     }
@@ -14,9 +19,8 @@
         height: $Producto-Imagen-BodyProductosH;
     }
     .ProductoImagen img:hover{
-        width: $Producto-Imagen-BodyProductosW-hover;
-        height: $Producto-Imagen-BodyProductosH-hover;
-    }
+        filter: grayscale(100%); // Aplica el filtro de blanco y negro al hacer hover
+      }
     .ProductoImagenTexto {
         width: $Producto-Imagen-TextoProductosW;
         margin: $Producto-Imagen-TextoProductosH;
@@ -60,8 +64,17 @@
     }
 @media (max-width: 767px) {
  
-    #BodyProductos .GridConteinter {
-        display: flex; /* Activa Flexbox para el contenedor */
-        flex-direction: column; /* Organiza los ítems en una columna */
-    }
+    #BodyProductos{
+        .GridConteinter {
+            align-items: center;
+            display: flex; 
+            flex-direction: column; 
+            .ProductoSection{
+                display:flex;
+                flex-direction: column;
+                }
+            }
+    
+        }
+     
 }

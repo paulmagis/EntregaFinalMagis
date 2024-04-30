@@ -1,0 +1,16 @@
+@import "utilities/colors";
+@import "utilities/variables";
+#Agradecimientos {
+    color: $Text-color1;
+    background-color: $BG-color;
+    text-align: center;
+    h2 {  
+        padding: 20px;
+        font-size: 30px; // Asegúrate de usar 'font-size' y especificar la unidad 'px'
+    }
+    
+    p {
+        
+        font-size: 20px; // Ejemplo para aumentar el tamaño de la fuente de los párrafos
+    }
+}

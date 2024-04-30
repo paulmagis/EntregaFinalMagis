@@ -6,7 +6,12 @@
 #body-poligono  {
     color: $Text-color1;
     background-color: $BG-color;
-
+    font-size: 20px;
+    .header{
+        #header-logo-glock{
+            width: 150px;
+        }
+    }
     @keyframes girar {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
@@ -34,10 +39,11 @@
         @include grid-display-rows($num-rows, $gap);
         .grid-item {
             background-color: $BG-color;
-            border: 1px solid darken(black, 20%);
+            border: 3px solid darken(black, 20%);
             padding: 20px;
             text-align: center;
             .grid-container-column {
+                background-color: #3e5c2a;
                 @include grid-display-columns($num-cols, $gap);
                 .img1 { transition : transform 0.5s ease;
                      display: block;}
@@ -51,21 +57,7 @@
                     display: block;}
                 .img3:hover { transform: rotateY(92deg);
                  }
-                 .img5 { transition : transform 0.5s ease;
-                    display: block;}
-                .img5:hover { transform: skewX(45deg);
-                 }
-                 
-                 .img6 { transition : transform 0.5s ease;
-                   display: block;}
-                .img6:hover{ transform: rotateX(92deg);
-                 }
-                .img7 {
-                    animation-name: girar; /* Nombre de la animación definida */
-                    animation-duration: 15s; /* Duración de la animación */
-                    animation-timing-function: linear; /* Función de tiempo para la transición */
-                    animation-iteration-count: infinite; /* Número de veces que la animación se repetirá */
-                  }
+                
                 .gradiente-lineal { transition : transform 0.5s ease;
                     display: block; 
                 }
@@ -79,7 +71,7 @@
                     display: block;
                     }
                 .gradiente-left:hover { 
-                    width: 800px;
+                    width: 400px;
                     height: 150px;
                      background-image: linear-gradient(to left, rgb(58, 209, 27), rgb(72, 90, 70));
                 }
@@ -93,11 +85,24 @@
 }
 @media (max-width: 768px) {  // Ajusta este valor según tus necesidades
     #body-poligono{
-        .grid-container-rows{
-            .grid-container-column {
-                 display: flex; /* Activa Flexbox para el contenedor */
-                flex-direction: column; /* Organiza los ítems en una columna */
-             }
-         }
-    } 
+                display: block;
+                .grid-container-rows{ 
+                    display: block;
+                    .grid-item{
+                         display: block;
+                         .grid-container-column{ 
+                            display: block;
+                            .img2 { display: none;}
+                            .gradiente-left {
+                             display: none;}
+                             .img6 { display: none;}
+                        }
+                        
+                        }
+                    
+                }
+                
+            }
+    
+    
 }

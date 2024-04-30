@@ -3,6 +3,11 @@
 #body-gestoria  {
     color: $Text-color1;
     background-color: $BG-color;
+    .header{
+        #header-logo-glock{
+            width: 150px;
+        }
+    }
      main {
         display: flex;
         align-items: center;
@@ -20,9 +25,39 @@
             }
           
         } 
+    
+    }
     footer {
         margin-top: $Footer-Body-Nosotros;
-        text-align: center; 
+       
+        #mapaGoogle{
+            display: inline;
+             height: 200px;
+             width: 48%;
+         }
+         #formularioContacto{
+            display: inline;
+             height: 250px;
+             width: 48%;
+           
+         }
     }
-}
+    .Botton {
+        background-color: $Header-bg-color;
+        color: $Header-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        margin: 0.5%;   
+        padding: 10px;  
+        box-shadow: 5px 5px 10px $Shadow-color ;
+        flex-wrap: wrap;
+        div {
+            width: $Div-width-Body-Nosotros;
+            text-align: center; 
+            img {
+                width: $Div-img-Body-Nosotros;
+            }
+        }
+    }
 }

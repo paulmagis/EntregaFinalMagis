@@ -12,7 +12,7 @@
 //mixin for header logo con parametros
 @mixin Header-logo($width, $height){
     flex: 0,5 2 0,5;
-    padding: 0 10px;
+    padding: 0 5px;
     width : $width;
     height: $height;  
 }
@@ -24,7 +24,7 @@
 //mixin for titulo-pagina
 @mixin Header-titulo-pagina{
     flex: 0,5 2 0,5;
-    padding: 0 10px;
+    padding: 0 5px;
     font-family: "Kode Mono", monospace;
     font-size: $Titulo-size; /* Ajusta este valor al tamaño que prefieras */
     font-weight: bold; /* Hace el texto más grueso */

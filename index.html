@@ -37,7 +37,7 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Pagina Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="index.html#Contactenos">Contactenos</a>
@@ -77,22 +77,24 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="imagenes/poligono.jpg" class="d-block w-100" alt="foto de un poligono de tiro">
+            <img src="imagenes/equipo.jpg"
+             class="d-block w-100" alt="foto de un poligono de tiro">
                <div class="carousel-caption d-none d-md-block">
-              <h5>Poligonos</h5>
-              <p>Seguridad, confianza , conford para ti.</p>
-              <a href="html/poligono.html">Quieres saber mas de nuestros polingonos</a>
+                <h5> Nosotros</h5>
+              <p>Nuestro Equipo de trabajo</p>
+              <a href="html/nosotros.html">Conosca mas sobre nosotros</a>
+              
               
               
             </div>
           </div>
           <div class="carousel-item">
-            <img src="imagenes/equipo.jpg" class="d-block w-100" alt="Nuestro Equipo de entrenadores">
+            <img src="imagenes/poligono.jpg" class="d-block w-100" alt="Nuestro Equipo de entrenadores">
             
             <div class="carousel-caption d-none d-md-block">
-              <h5> Nosotros</h5>
-              <p>Nuestro Equipo de trabajo</p>
-              <a href="html/nosotros.html">Conosca mas sobre nosotros</a>
+              <h5>Poligonos</h5>
+              <p>Seguridad, confianza , conford para ti.</p>
+              <a href="html/poligono.html">Quieres saber mas de nuestros polingonos</a>
 
             </div>
           </div>
@@ -133,17 +135,33 @@
     <!-- Fin Carousel -->
 
     <footer>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52860.44465713396!2d-56.24776913851808!3d-34.10083252327891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a102b5a0ba98df%3A0x2d2df4032fa1cde5!2s94000%20Florida%2C%20Departamento%20de%20Florida!5e0!3m2!1ses-419!2suy!4v1708439152271!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <form action="form.php" method="POST">
+        <iframe id="mapaGoogle" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52860.44465713396!2d-56.24776913851808!3d-34.10083252327891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a102b5a0ba98df%3A0x2d2df4032fa1cde5!2s94000%20Florida%2C%20Departamento%20de%20Florida!5e0!3m2!1ses-419!2suy!4v1708439152271!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <form id="formularioContacto" action="form.php" method="POST">
             <label for="">Nombre y Apellido</label>
             <input type="text" name="Nombre" id="Nombre" placeholder="Jose Perez">
             <p id="Contactenos">Consulta</p>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="" id="" cols="58" rows="7"></textarea>
             <input type="submit" value="">
         </form>
     </footer>
     <!--Aqui agrego el script para el bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <Section>
+      
+      <div><a href="./html/El-Curso.html"> <img src="../imagenes/Carpeta.png" alt="imagen de carpeta">
+        </a>
+        <h3>Para el Profesor</h3>  
+      </div>
+       
+       <div><a href="./html/El-Curso.html"><img src="../imagenes/computadora.png" alt="imagen de una computadora">
+        </a>
+        <h3>Agradecimientos</h3>
+          
+       </div>
+       <div><a href="https://www.linkedin.com/in/paul-magis-a8a457138/"><img src="../imagenes/diploma.png" alt="imagen de diploma">
+        </a>
+        <h3>Conosca al Autor</h3>  
+       </div> 
+    </Section> 
 </body>
 </html>
