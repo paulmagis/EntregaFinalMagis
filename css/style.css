@@ -399,22 +399,17 @@
 #body-gestoria .header #header-logo-glock {
   width: 150px;
 }
-#body-gestoria main {
-  display: flex;
+#body-gestoria section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 100px;
-  flex-wrap: wrap;
-}
-#body-gestoria main .Textos {
-  text-align: center;
-}
-#body-gestoria main .Textos h2 {
   margin: 10px;
 }
-#body-gestoria main .Textos h2 span {
-  display: block;
+#body-gestoria section h2 {
+  margin: 10px;
+}
+#body-gestoria .tramites {
+  color: #081304;
 }
 #body-gestoria footer {
   margin-top: 20px;

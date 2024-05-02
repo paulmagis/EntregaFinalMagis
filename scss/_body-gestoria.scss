@@ -8,25 +8,18 @@
             width: 150px;
         }
     }
-     main {
-        display: flex;
+    section {
         align-items: center;
         justify-content: center; 
         text-align: center;
-        margin: 100px;   
-        flex-wrap: wrap;  
-        .Textos {
-            text-align: center;
-            h2  {
-                margin: 10px;     
-                span {
-                    display: block;
-                }
+        margin: 10px;   
+        h2  {
+            margin: 10px;     
             }
-          
-        } 
-    
-    }
+        }
+        .tramites{
+            color: $Text-color1;
+        }
     footer {
         margin-top: $Footer-Body-Nosotros;
        
